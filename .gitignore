@@ -1,3 +1,8 @@
 /config/*
+
 !/config/nvim
 /config/nvim/lazy-lock.json
+
+!/config/kitty
+
+*.old
