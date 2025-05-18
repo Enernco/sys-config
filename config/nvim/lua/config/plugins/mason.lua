@@ -1,9 +1,32 @@
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("mason").setup()
+require("mason").setup({
+    registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+    },
+})
+
 require("mason-lspconfig").setup()
 require("mason-lspconfig").setup_handlers {
     function(server_name)
+	if server_name == "html" then
+
+	    require("lspconfig").html.setup {
+		capabilities = capabilities,
+		filetypes = { "html", "css", "javascript", "typescript", "razor", "cshtml" },
+		init_options = {
+		    configurationSection = { "html", "css", "javascript" },
+		    embeddedLanguages = {
+			css = true,
+			javascript = true
+		    }
+		}
+	    }
+
+	    return
+	end
+
 	require("lspconfig")[server_name].setup {
 	    capabilities = capabilities
 	}

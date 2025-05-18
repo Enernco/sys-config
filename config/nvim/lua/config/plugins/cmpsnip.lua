@@ -17,7 +17,10 @@ cmp.setup({
     sources = cmp.config.sources({
 	{ name = 'nvim_lsp' },
 	{  name = 'vsnip' },
-	{ name = "vim-dadbod-completion" }
+	-- for sql
+	{ name = "vim-dadbod-completion" },
+	-- extend lua functionalities
+	{ name = "lazydev" }
     }, {
 	{ name = 'buffer' },
     }),
