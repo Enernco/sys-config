@@ -5,4 +5,7 @@
 
 !/config/kitty
 
+!/config/hypr
+/config/hypr/hyprland.conf.d/autostart.conf
+
 *.old
