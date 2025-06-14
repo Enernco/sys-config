@@ -1,12 +1,6 @@
-/config/*
+/.gitignored/**
 
-!/config/nvim
 /config/nvim/lazy-lock.json
-
-!/config/kitty
-
-!/config/hypr
 /config/hypr/hyprland.conf.d/autostart.conf
-!/config/wofi
 
 *.old
