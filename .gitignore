@@ -7,5 +7,6 @@
 
 !/config/hypr
 /config/hypr/hyprland.conf.d/autostart.conf
+!/config/wofi
 
 *.old
